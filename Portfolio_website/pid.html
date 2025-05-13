@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PID Controller</title>
+    <link rel="stylesheet" href="style.css">
+    <body>
+<header>
+        <h1>PID Ball Balance Controller</h1>
+
+    </header>
+
+    <section id="about">
+        <h2>Project Overview</h2>
+        <p>Following my Feedback and Control Systems course i decided to work on a PID project to futher solidify my understanding of PID controllers and feedback systems.</p>
+        <p>This project invloved a 3D printed scale with the objective of balancing a ping pong ball at its center though the use of PID control.
+            The feedback system consisted of and infrared sensor which detected the ball's distance, it then relayed that information through an Arduino Uno microcontroller which calculated the error, based on this the PID controller would adjust the position of a servo motor to ttilt the scale and move the ball back to its center.
+        </p>
+        
+        <div class="image-gallery">
+            <!-- Space for project images -->
+            <img src="./images/PIDCAD.png" alt="PID Controller">
+            <img src="./images/PIDass.jpg" alt="PID Controller">
+           
+        </div>
+    </section>
+
+    <section id="outcomes">
+        <h2>Outcomes and Contributions</h2>
+        
+        <div class="contribution">
+            <h3>CAD and Assembly</h3>
+            <p>Fusion360 was used to design all the parts for the scale, the components were then 3D printed using ABS</p>
+            <p>The balance was assembled using various screws, glue and tape, ensuring all hinges rotated smoothly. </p>
+            <p><strong>Result:</strong> All parts successfuly 3D printed and assembled.</p>
+        </div>
+
+        <div class="image-gallery">
+            <!-- Space for design images -->
+            <img src="./images/PIDCAD.png" alt="PID CAD Design">
+            <img src="./images/3Dparts.jpg" alt="3D Printed Components">
+             <img src="./images/PIDass.jpg" alt="Full Assembly">
+        </div>
+
+        <div class="contribution">
+            <h3>Circuit Setup</h3>
+            <p>The circuit consisted of a servo motor and an infrared (IR) sensor connected to an Arduino Uno microcontroller.</p>
+            <p>The servo was attached to digital pin D9, which supports Pulse Width Modulation (PWM) to control the motor's position by varying the pulse width of the signal.
+               The IR sensor was connected to analog pin A0, as it outputs a continuous analog voltage corresponding to the position of the ball.</p>
+            <p><strong>Result:</strong> Circuit was assembled and system compments were tested to ensure function before being implemented into the full assembly</p>
+        </div>
+           <div class="image-gallery">
+            <!-- Space for prototype images -->
+            <img src="./images/ciruit2.jpg" alt="Picture of Circuit">
+            
+        </div>
+
+        <div class="contribution">
+            <h3>Arduino Code</h3>
+            <p> The code implements a PID control system to stabalize the ball by adjusting the postion of the servo motor based on the distance measurments from the IR sensor
+            
+            </p>
+            <p>The PID components consisted of:</p>
+            <ul>
+                <li>Proportional (PID_p): The proportional component is responsible for the immediate response to the error. It adjusts the postion of the ball on the current error value.</li>
+                <li>Integral (PID_i): The integral component accumulates the error over time, addressing any persistent offset of the ball position that may not be corrected by the proportional component alone.</li>
+                <li>Derivative (PID_d): The derivative component predicts future error based onthe speed of the ball, providing a damping effect to reduce overshoot of the ball's postion.</li>
+            
+            <p> The controller was tuned through trial and error by tweaking the proportional, derivative and intergral constants (kp, ki, kd) </p>
+            <p> The error in this case is the difference between the desired setpoint (middle of the scale) and the actual distance of the ball</p>
+            <br>
+            <p> For more details on the code visit my github: https://github.com/Rayman531</p>
+            <br>
+            <p><strong>Result:</strong> Succesfully programmed PID controller, however still in the process of tuning as ball does not sit perfectly in the middle</p>
+        </div>
+
+        <div class="image-gallery">
+            <!-- Space for prototype images -->
+            <img src="./images/PID_Constants.png" alt="image of code">
+            
+        </div>
+    </section>
+    </body>
+    </html>
