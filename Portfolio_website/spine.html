@@ -29,14 +29,18 @@
             <!-- Space for design images -->
             <img src="./images/pedicle.png" alt="Pedicle Screw Insertion">
             <img src="./images/arm.png" alt="Exerimental Setup">
-             <img src="./images/it3.png" alt="Topology Itteration 3">
         </div>
 
         <div class="contribution">
-            <h3>Static Stress Verification</h3>
-            <p>Conducted multiple FEA studies to verify optimized wrench would fail within range.</p>
-            <p>Four load cases were tested 112 N, 125 N, 145 N, and 166 N, these increments ensured a more accurate prediction of when and where the wrench was to fail. Loads were placed in the downwards direction at the handle to simulate the weight added, fully fixed constraints were placed at the interfaces between the nut and the wrench.</p>
-            <p><strong>Result:</strong> The wrench was predicte to fail at around 125 N of force (30.1 Nm) which was before the required threshold 40Nm.</p>
+            <h3>Data Collection and Analysis</h3>
+            <p>Motion data was collected simultaneously with internal loading data using LabVIEW and NDI First Principles software, synchronized electronically at a 100 Hz sampling rate over a 30-second test duration.</p>
+            <p>Using MATLAB,  a pipeline was implemented to process raw marker coordinates into local vertebral coordinate systems. 
+                Transformation matrices were calculated as well as relative rotation angles of the vertebrae under load. This was done for each of the three states—healthy, injured, and fixated—under both flexion-extension and lateral bending.</p>
+           <p> Two key metrics were extracted from this data:</p>
+            <ul>
+                <li>Range of Motion (ROM): Maximum angular displacement experienced by the top vertebra relative to the bottom.</li>
+                <li>Neutral Zone (NZ): Region around the neutral posture where minimal resistance to motion occurs, often associated with spinal instability.</li>
+            </ul>
         </div>
            <div class="image-gallery">
             <!-- Space for prototype images -->
