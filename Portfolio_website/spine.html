@@ -15,6 +15,64 @@
         <p> The purpose of this project was to conduct a comprehensive evaluation of the mechanical stability provided by spinal fixation hardware in a porcine cervical spine model. 
             The experiment simulated three clinical conditions: a healthy spine, an injured spine (disc disruption), and a post-fixation spine using pedicle screws and a cross-rod system. 
             The goal was to analyze how spinal motion changes across these conditions under flexion-extension and lateral bending loads. </p>
+     <section id="outcomes">
+        <h2>Outcomes and Contributions</h2>
+        
+        <div class="contribution">
+            <h3>Setup</h3>
+            <p>The specimen was prepared by removing soft tissue while preserving ligamentous structures. Rigid body marker pins were then inserted into three vertebrae to enable motion tracking using an Optotrak motion capture system. </p>
+                <p>The spine was mounted on a test fixture equipped with a six-axis load cell and actuated by a torsion arm.</p>
+            
+        </div>
+
+        <div class="image-gallery">
+            <!-- Space for design images -->
+            <img src="./images/it1.png" alt="Topology Itteration 1">
+            <img src="./images/it2.png" alt="Topology Itteration 2">
+             <img src="./images/it3.png" alt="Topology Itteration 3">
+        </div>
+
+        <div class="contribution">
+            <h3>Static Stress Verification</h3>
+            <p>Conducted multiple FEA studies to verify optimized wrench would fail within range.</p>
+            <p>Four load cases were tested 112 N, 125 N, 145 N, and 166 N, these increments ensured a more accurate prediction of when and where the wrench was to fail. Loads were placed in the downwards direction at the handle to simulate the weight added, fully fixed constraints were placed at the interfaces between the nut and the wrench.</p>
+            <p><strong>Result:</strong> The wrench was predicte to fail at around 125 N of force (30.1 Nm) which was before the required threshold 40Nm.</p>
+        </div>
+           <div class="image-gallery">
+            <!-- Space for prototype images -->
+            <img src="./images/L1.png" alt="load case 1">
+            <img src="./images/L2.png" alt="load case 2">
+           
+        </div>
+
+        <div class="contribution">
+            <h3>Tool Paths and Machining</h3>
+            <p>The manufacturing process followed design-for-manufacturability (DFM) principles and utilized Fusion 360’s 
+                Computer Aided Manufacturing (CAM) workspace to achieve accuracy and efficiency while staying within the project’s constraints</p>
+            <p>Utilized facing and adaptive clearing and contouring operations with 1 one change of fixture</p>
+            <p><strong>Result:</strong> Successfully programmed all tool paths to CNC machine the torque wrench</p>
+        </div>
+
+        <div class="image-gallery">
+            <!-- Space for prototype images -->
+            <img src="./images/Toolpath.png" alt="Toolpath">
+            <img src="./images/CNC.jpg" alt="CNC Setup">
+        </div>
+                <div class="contribution">
+            <h3>Testing</h3>
+            <p>Following the manufacturing and post processing, the wrench was tested to validate the FEA results.
+        
+            </p>
+            <p>During physical testing, the wrench was mounted in the test rig, a steel handle was attached, and weights were incrementally applied using the hanging mass setup. Real-time torque measurements were recorded until failure occurred.</p>
+            <p><strong>Result:</strong> Wrench failed succesfully in the predicted location at 29.7 ft-lb which was just within acceptable range. </p>
+        </div>
+
+         <div class="image-gallery">
+            <!-- Space for prototype images -->
+            <img src="./images/setup.jpg" alt="Test Setup">
+            <img src="./images/deform.jpg" alt="Deformation">
+        </div>
+    </section>
     
     <section>
         
